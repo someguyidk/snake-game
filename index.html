@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snake Game</title>
+</head>
+	<body>
+		<canvas id="canvas" onclick="onPress()"></canvas>
+		<p id="para1"></p>
+	<script type="text/javascript"> 
+let gameCanvas,ctx,x,y;
+let game = true;
+let slider = [];
+
+class snake {
+	constructor(){
+		this.body = slider
+		ctx.fillStyle = 'blue';
+		ctx.fillRect(100,100,100,100);
+	}
+	addbox(){
+		
+	}
+}
+
+function init() {
+	gameCanvas = document.getElementById('canvas');
+	gameCanvas.width = 600;
+	gameCanvas.height = 600;
+	ctx = gameCanvas.getContext('2d');	
+	ctx.fillStyle = "lightgray";
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+init();
+
+function draw(x,y,turn, board) {
+	let bob = new snake();
+
+}
+
+function onPress(event) {
+  if (game == true && event != null) {
+    var rect = gameCanvas.getBoundingClientRect();
+    document.getElementById("para1").style.backgroundColor = "red";
+    console.log(event)
+    switch (event.keyCode) {
+    	case 37:
+    		console.log("Left key is pressed.");
+            break;
+         case 38:
+            console.log("Up key is pressed.");
+            break;
+         case 39:
+            console.log("Right key is pressed.");
+            break;
+         case 40:
+            console.log("Down key is pressed.");
+            break;
+         case 104:
+         	console.log("H pressed");
+         	break;
+    }
+    var coords = "X coords: " + mx + ", Y coords: " + my + "\n x: " + x +", y: "+ y;
+    console.log(coords);
+} else {
+		console.log(event);
+	}
+}
+
+gameCanvas.addEventListener("keydown",onPress(event));
+//document.onclick = alert('clicked');
+//document.onkeypress = onPress(event);
+
+	</script>
+	</body>
+</html>
